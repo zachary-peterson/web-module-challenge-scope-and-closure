@@ -27,11 +27,11 @@ function processFirstItem(stringList, callback) {
  * Study the code for counter1 and counter2. Answer the questions below.
  * 
  * 1. What is the difference between counter1 and counter2?
- * 
+ *  Counter one defines count inside the function and not globally, meaning that the value can only be changed by invoking that function.
  * 2. Which of the two uses a closure? How can you tell?
- * 
+ *  Counter1 code because of where the count is defined. 
  * 3. In what scenario would the counter1 code be preferable? In what scenario would counter2 be better? 
- *
+ *  When you're going to be passing in new parameters where they'll all need their own individual count. Not sure if it's the same kind of thing, but a good example would be a video game where different things are all going to need to be kept track of at once. The second code may be beneficial if theres only one thing being tracked and the value is only going to be changed by one thing, and one thing alone. 
 */
 
 // counter1 code
@@ -56,11 +56,11 @@ function counter2() {
 
 Write a function called `inning` that generates a random number of points that a team scored in an inning. This should be a whole number between 0 and 2. */
 
-function inning(/*Code Here*/){
-
-    /*Code Here*/
-
+function inning(score){
+    return score;
 }
+
+
 
 /* Task 3: finalScore()
 
