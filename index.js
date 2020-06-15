@@ -121,11 +121,11 @@ function scoreboard(funct, innNum) {
   for(i = 0; i < innNum; i++){
     homeTeam += funct();
     awayTeam += funct();
-    console.log(`${i} inning: ${homeTeam} - ${awayTeam}`)
+    console.log(`${i+1} inning: ${homeTeam} - ${awayTeam}`)
   }
 
   return (`Final Score: ${homeTeam} - ${awayTeam}`);
 }
 
 
-
+console.log(scoreboard(inning, 9));
