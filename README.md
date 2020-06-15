@@ -42,6 +42,9 @@ Find the file `index.js` and complete the tasks.
 Edit the `ReadMe` file with your answers.
 
 1. In your own words, define closure (1-2 sentences).
+
+  Closure is basically what has access to what. Certain things are closed off from others depending on if/where they're nested.
+
 2. Study the following code, then answer the questions below.
 
 ```js
@@ -63,8 +66,16 @@ dansRoll();
 ```
 
 a. Where is closure used in this code? How can you tell?
+
+  After the function is invoked, because you can put different names in and get different results for each person.
+
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
+
+  It always says what Dan just rolled, and doesn't log his previous rolls. 
+
 c. What is the lexical scope of `newRoll`? 
+
+  The personalDice function.
 
 ### Task 2c - Exit Ticket
 
