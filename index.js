@@ -82,9 +82,6 @@ function finalScore(funct, innNum){
 
   for(i = 0; i < innNum; i++){
     homeTeam += funct();
-  }
-
-  for(j = 0; j < innNum; j++){
     awayTeam += funct();
   }
 
@@ -117,8 +114,18 @@ and returns the score at each pont in the game, like so:
 
 Final Score: 6 - 10 */
 
-function scoreboard(/* CODE HERE */) {
-  /* CODE HERE */
+function scoreboard(funct, innNum) {
+  let homeTeam = 0;
+  let awayTeam = 0;
+
+  for(i = 0; i < innNum; i++){
+    homeTeam += funct();
+    awayTeam += funct();
+    console.log(`${i} inning: ${homeTeam} - ${awayTeam}`)
+  }
+
+  return (`Final Score: ${homeTeam} - ${awayTeam}`);
 }
+
 
 
