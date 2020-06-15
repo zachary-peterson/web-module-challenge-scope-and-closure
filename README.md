@@ -67,7 +67,7 @@ dansRoll();
 
 a. Where is closure used in this code? How can you tell?
 
-  After the function is invoked, because you can put different names in and get different results for each person.
+  After the function nested inside personalDice(name) is invoked, because only the anonymous function within personalDice(name) will have lexical scope.
 
 b. Compare and contrast calling `dansRoll` the first and second time. What is always the same? What could change?
 
@@ -106,6 +106,22 @@ var addSix = createBase(6);
 addSix(10); // returns 16
 addSix(21); // returns 27
 ```
+
+      function createBase(x) {
+         return function(y) {
+          return x + y;
+        };
+      }
+
+      var addSix = createBase(6);
+
+
+      console.log(addSix(2)); 
+      console.log(addSix(21)); 
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
+https://codepen.io/zachary-peterson/pen/vYLXmxV?editors=0012
+
 
 3. Research the differences between functional programming and object oriented programming. Then, describe the pros and cons of functional programming vs object-oriented programming. This is a common interview question and great practice!
 
